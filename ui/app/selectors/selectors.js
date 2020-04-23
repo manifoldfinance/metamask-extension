@@ -79,7 +79,8 @@ export function getAccountType(state) {
   switch (type) {
     case 'Trezor Hardware':
     case 'Ledger Hardware':
-      return 'hardware';
+    case 'Lattice Hardware':
+      return 'hardware'
     case 'Simple Key Pair':
       return 'imported';
     default:
