@@ -57,6 +57,7 @@ import seedPhraseVerifier from './lib/seed-phrase-verifier'
 import log from 'loglevel'
 import TrezorKeyring from 'eth-trezor-keyring'
 import LedgerBridgeKeyring from '@metamask/eth-ledger-bridge-keyring'
+import LatticeKeyring from 'eth-lattice-keyring'
 import EthQuery from 'eth-query'
 import nanoid from 'nanoid'
 import contractMap from 'eth-contract-metadata'
@@ -189,7 +190,7 @@ export default class MetamaskController extends EventEmitter {
       this.accountTracker._updateAccounts()
     })
 
-    const additionalKeyrings = [TrezorKeyring, LedgerBridgeKeyring]
+    const additionalKeyrings = [TrezorKeyring, LedgerBridgeKeyring, LatticeKeyring]
     this.keyringController = new KeyringController({
       keyringTypes: additionalKeyrings,
       initState: initState.KeyringController,
@@ -747,6 +748,7 @@ export default class MetamaskController extends EventEmitter {
       simpleKeyPair: simpleKeyPairAccounts.filter((item, pos) => (simpleKeyPairAccounts.indexOf(item) === pos)).map((address) => ethUtil.toChecksumAddress(address)),
       ledger: [],
       trezor: [],
+      lattice: [],
     }
 
     // transactions
@@ -835,6 +837,7 @@ export default class MetamaskController extends EventEmitter {
 
   async getKeyringForDevice (deviceName, hdPath = null) {
     let keyringName = null
+    let keyringOpts = null
     switch (deviceName) {
       case 'trezor':
         keyringName = TrezorKeyring.type
@@ -842,12 +845,16 @@ export default class MetamaskController extends EventEmitter {
       case 'ledger':
         keyringName = LedgerBridgeKeyring.type
         break
+      case 'lattice':
+        keyringName = LatticeKeyring.type
+        keyringOpts = { name: "MetaMask", network: this.networkController.getProviderConfig().type };
+        break
       default:
         throw new Error('MetamaskController:getKeyringForDevice - Unknown device')
     }
     let keyring = await this.keyringController.getKeyringsByType(keyringName)[0]
     if (!keyring) {
-      keyring = await this.keyringController.addNewKeyring(keyringName)
+      keyring = await this.keyringController.addNewKeyring(keyringName, keyringOpts)
     }
     if (hdPath && keyring.setHdPath) {
       keyring.setHdPath(hdPath)
@@ -915,7 +922,6 @@ export default class MetamaskController extends EventEmitter {
    */
   async unlockHardwareWalletAccount (index, deviceName, hdPath) {
     const keyring = await this.getKeyringForDevice(deviceName, hdPath)
-
     keyring.setAccountToUnlock(index)
     const oldAccounts = await this.keyringController.getAccounts()
     const keyState = await this.keyringController.addNewAccount(keyring)
