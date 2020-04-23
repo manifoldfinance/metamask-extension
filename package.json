@@ -113,6 +113,7 @@
     "eth-keyring-controller": "^6.1.0",
     "eth-method-registry": "^2.0.0",
     "eth-phishing-detect": "^1.1.14",
+    "eth-lattice-keyring": "^0.2.10",
     "eth-query": "^2.1.2",
     "eth-rpc-errors": "^4.0.2",
     "eth-sig-util": "^3.0.0",
@@ -326,7 +327,8 @@
       "github:assemblyscript/assemblyscript": false,
       "tiny-secp256k1": false,
       "@lavamoat/preinstall-always-fail": false,
-      "fsevents": false
+      "fsevents": false,
+      "gridplus-sdk": false
     }
   }
 }
