@@ -2,6 +2,34 @@
 
 ## Current Develop Branch
 
+## 9.0.5 Mon Feb 08 2021
+- [#10278](https://github.com/MetaMask/metamask-extension/pull/10278): Allow editing transaction amount after clicking max
+- [#10214](https://github.com/MetaMask/metamask-extension/pull/10214): Standardize size, shape and color of network color indicators
+- [#10298](https://github.com/MetaMask/metamask-extension/pull/10298): Use network primary currency instead of always defaulting to ETH in the confirm approve screen
+- [#10300](https://github.com/MetaMask/metamask-extension/pull/10300): Add origin to signature request confirmation page
+- [#10296](https://github.com/MetaMask/metamask-extension/pull/10296): Add origin to transaction confirmation
+- [#10266](https://github.com/MetaMask/metamask-extension/pull/10266): Update `ko` localized messages
+- [#10263](https://github.com/MetaMask/metamask-extension/pull/10263): Update `id` localized messages
+- [#10347](https://github.com/MetaMask/metamask-extension/pull/10347): Require click of "Continue" button to interact with swap screen if there is a price impact warning for present swap
+- [#10373](https://github.com/MetaMask/metamask-extension/pull/10373): Change copy of submit button on swaps screen
+- [#10346](https://github.com/MetaMask/metamask-extension/pull/10346): Swaps token sources/verification messaging update
+- [#10378](https://github.com/MetaMask/metamask-extension/pull/10378): Stop showing the window.web3 in-app popup if the dapp is just using web3.currentProvider
+- [#10326](https://github.com/MetaMask/metamask-extension/pull/10326): Throw error when attempting to get an encryption key via eth_getEncryptionPublicKey when connected to Ledger HW
+- [#10386](https://github.com/MetaMask/metamask-extension/pull/10386): Make action buttons on message components in swaps flow accessible
+
+## 9.0.4 Fri Jan 22 2021
+- [#10285](https://github.com/MetaMask/metamask-extension/pull/10285): Update @metamask/contract-metadata from v1.21.0 to 1.22.0
+- [#10174](https://github.com/MetaMask/metamask-extension/pull/10174): Move fox to bottom of 'About' page
+- [#10198](https://github.com/MetaMask/metamask-extension/pull/10198): Fix hardware account selection
+- [#10101](https://github.com/MetaMask/metamask-extension/pull/10101): Add a timeout to all network requests
+- [#10212](https://github.com/MetaMask/metamask-extension/pull/10212): Fix displayed balance of tokens with 0 decimals in swaps flow
+- [#10162](https://github.com/MetaMask/metamask-extension/pull/10162): Prevent accidentally submitting a swap twice
+- [#10224](https://github.com/MetaMask/metamask-extension/pull/10224): Improve chain ID validation
+- [#10195](https://github.com/MetaMask/metamask-extension/pull/10195): Increase minimum Firefox version to v68
+- [#10192](https://github.com/MetaMask/metamask-extension/pull/10192): Update TrezorConnect to v8
+- [#10166](https://github.com/MetaMask/metamask-extension/pull/10166): Fix back button on swaps loading page
+- [#9947](https://github.com/MetaMask/metamask-extension/pull/9947): Do not publish swaps transaction if the estimateGas call made when adding the transaction fails.
+
 ## 9.0.3 Fri Jan 22 2021
 - [#10243](https://github.com/MetaMask/metamask-extension/pull/10243): Fix site metadata handling
 - [#10252](https://github.com/MetaMask/metamask-extension/pull/10252): Fix decrypt message confirmation UI crash

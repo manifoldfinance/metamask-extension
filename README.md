@@ -1,5 +1,8 @@
 # MetaMask Browser Extension
 
+Hey! We are hiring JavaScript Engineers! [Apply here](https://boards.greenhouse.io/consensys/jobs/2572388)!
+---
+
 You can find the latest version of MetaMask on [our official website](https://metamask.io/). For help using MetaMask, visit our [User Support Site](https://metamask.zendesk.com/hc/en-us).
 
 For [general questions](https://metamask.zendesk.com/hc/en-us/community/topics/360000682532-General), [feature requests](https://metamask.zendesk.com/hc/en-us/community/topics/360000682552-Feature-Requests-Ideas), or [developer questions](https://metamask.zendesk.com/hc/en-us/community/topics/360001751291-Developer-Questions), visit our [Community Forum](https://metamask.zendesk.com/hc/en-us/community/topics).
@@ -14,10 +17,10 @@ To learn how to contribute to the MetaMask project itself, visit our [Internal D
 
 ## Building locally
 
-- Install [Node.js](https://nodejs.org) version 10
+- Install [Node.js](https://nodejs.org) version 14
     - If you are using [nvm](https://github.com/creationix/nvm#installation) (recommended) running `nvm use` will automatically choose the right node version for you.
 - Install [Yarn](https://yarnpkg.com/en/docs/install)
-- Install dependencies: `yarn`
+- Install dependencies: `yarn setup` (not the usual install command)
 - Copy the `.metamaskrc.dist` file to `.metamaskrc`
     - Replace the `INFURA_PROJECT_ID` value with your own personal [Infura Project ID](https://infura.io/docs).
     - If debugging MetaMetrics, you'll need to add a value for `SEGMENT_WRITE_KEY` [Segment write key](https://segment.com/docs/connections/find-writekey/).
