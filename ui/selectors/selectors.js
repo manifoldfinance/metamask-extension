@@ -83,7 +83,12 @@ export function getCurrentKeyring(state) {
 
 export function isEIP1559Account(state) {
   // Neither hardware wallet supports 1559 at this time
-  return !isHardwareWallet(state);
+  // return !isHardwareWallet(state);
+  const isHw = isHardwareWallet(state);
+  // Lattice does, though
+  const keyring = getCurrentKeyring(state);
+  const type = keyring && keyring.type;
+  return !isHw || type === 'Lattice Hardware';
 }
 
 export function checkNetworkAndAccountSupports1559(state) {
@@ -120,6 +125,7 @@ export function getAccountType(state) {
   switch (type) {
     case 'Trezor Hardware':
     case 'Ledger Hardware':
+    case 'Lattice Hardware':
       return 'hardware';
     case 'Simple Key Pair':
       return 'imported';
