@@ -298,7 +298,15 @@ export default class TypedMessageManager extends EventEmitter {
    *
    */
   rejectMsg(msgId) {
-    this._setMsgStatus(msgId, 'rejected');
+    const msg = this.getMsg(msgId);
+    if (!msg) {
+      throw new Error(
+        `TypedMessageManager - Message not found for id: "${msgId}".`,
+      );
+    }
+    if (msg.status !== 'approved') {
+      this._setMsgStatus(msgId, 'rejected');
+    }
   }
 
   /**
