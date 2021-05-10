@@ -12703,9 +12703,9 @@ graphql@^0.13.0:
     iterall "^1.2.1"
 
 gridplus-sdk@^0.7.13:
-  version "0.7.14"
-  resolved "https://registry.yarnpkg.com/gridplus-sdk/-/gridplus-sdk-0.7.14.tgz#3eccbd7ab378c4090d0371e7be60535166bee3ac"
-  integrity sha512-kWxirPmGu9zDEKyRe8iElIQmPMEMXCot70c3/wcv7n6sQPuYpTjvKSpYQsgGsQ2kdfv2ObcVFF4Q1j5K/dlPWw==
+  version "0.7.15"
+  resolved "https://registry.yarnpkg.com/gridplus-sdk/-/gridplus-sdk-0.7.15.tgz#94e4935cd41d4b5ef363c6fb6d283474be2d25c3"
+  integrity sha512-LSaBv0REhIzcbsVghhamqTFHfnxAuX89oEbGO8BuiTpd9OroQADnOuBgItkm5l2sYexZuxl9ZbdGrCPG7/velw==
   dependencies:
     aes-js "^3.1.1"
     bignumber.js "^9.0.1"
