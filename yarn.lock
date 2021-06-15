@@ -13464,9 +13464,9 @@ graphql-request@^1.8.2:
     cross-fetch "2.2.2"
 
 gridplus-sdk@^0.7.16:
-  version "0.7.22"
-  resolved "https://registry.yarnpkg.com/gridplus-sdk/-/gridplus-sdk-0.7.22.tgz#8cd61778c69afa510f5a08a83f9d42209d65c3fe"
-  integrity sha512-rsVxbmNqpQrImOhwSyATUmkBHS4odv/R6L8T0ICdHNWw+dJhuxzqFwV9vn2kyt3/5YMCI49+vWOZsntruzYhHg==
+  version "0.7.23"
+  resolved "https://registry.yarnpkg.com/gridplus-sdk/-/gridplus-sdk-0.7.23.tgz#c3068ccef27ed978d445eb347db89ac488a61ad8"
+  integrity sha512-G3nyCmaTojnwXjIL1kKFNsQMmJutkC8RpnQgSgQVzkOZDDSxtTXf6wDb24gOfAp4wsB47zg1wl7CzWmFEWrk+Q==
   dependencies:
     aes-js "^3.1.1"
     bech32 "^2.0.0"
