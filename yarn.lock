@@ -10945,10 +10945,10 @@ eth-keyring-controller@^6.2.0:
     loglevel "^1.5.0"
     obs-store "^4.0.3"
 
-eth-lattice-keyring@^0.2.26:
-  version "0.2.26"
-  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.2.26.tgz#7501db924bc748ec547b24390f2daed09591543f"
-  integrity sha512-wRRbN61OOcjVlRu/6IJ/rzt2vb6fy7StLVtvCBCepV80sh41Mg8m/oh8qK++b8u2o1kAetzeGWjX+eziItwY5g==
+eth-lattice-keyring@^0.2.27:
+  version "0.2.27"
+  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.2.27.tgz#a457042cb4881ebb89708e387766efeb82ddcc46"
+  integrity sha512-bMnmjqUkHzh8sGposWSBP6fvoLdyDKHwxUfOUbMzEawWv2FFrGQgYC0wq7CgaWNUo6yoDO60xStwF5f/uxISFw==
   dependencies:
     ethereumjs-common "^1.5.2"
     ethereumjs-tx "^2.1.2"
