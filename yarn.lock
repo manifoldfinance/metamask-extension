@@ -11518,12 +11518,13 @@ eth-keyring-controller@^6.1.0, eth-keyring-controller@^6.2.0, eth-keyring-contro
     obs-store "^4.0.3"
 
 eth-lattice-keyring@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.3.0.tgz#6faaaa2e2671c50e7ad522553b90f0c39ee0ed7a"
-  integrity sha512-bfpqsO8LxF40ey95wECBxyhvCDTI9ToQzjNnqOxoAzMWTfZBOxbEM3hK6ywdr/Pzhnj/R/oMTUePtcFesGOKuA==
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/eth-lattice-keyring/-/eth-lattice-keyring-0.3.1.tgz#71e54329b93b126c6d97867fa3abf6d0222f5fe2"
+  integrity sha512-9dD2UAu60//8EDl7FemDOdM+946cRQfvBK0Gn8iSQNIDX4vlZ5b3q+/eEUqf1BjKeuPROdnF65OiMoCwkGM+hw==
   dependencies:
     "@ethereumjs/common" "^2.4.0"
     "@ethereumjs/tx" "^3.1.1"
+    bignumber.js "^9.0.1"
     ethereumjs-util "^7.0.10"
     gridplus-sdk "^0.8.0"
 
@@ -26494,9 +26495,9 @@ tar@6.0.2:
     yallist "^4.0.0"
 
 tar@^4:
-  version "4.4.16"
-  resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.16.tgz#4a48b3c025e77d9d0c788f038a09b91c594d326d"
-  integrity sha512-gOVUT/KWPkGFZQmCRDVFNUWBl7niIo/PRR7lzrIqtZpit+st54lGROuVjc6zEQM9FhH+dJfQIl+9F0k8GNXg5g==
+  version "4.4.17"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.17.tgz#44be5e3fa8353ee1d11db3b1401561223a5c3985"
+  integrity sha512-q7OwXq6NTdcYIa+k58nEMV3j1euhDhGCs/VRw9ymx/PbH0jtIM2+VTgDE/BW3rbLkrBUXs5fzEKgic5oUciu7g==
   dependencies:
     chownr "^1.1.4"
     fs-minipass "^1.2.7"
