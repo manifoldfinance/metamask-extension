@@ -42,6 +42,23 @@ export default class SelectHardware extends Component {
     );
   }
 
+  renderConnectToLatticeButton() {
+    return (
+      <button
+        className={classnames('hw-connect__btn', {
+          selected: this.state.selectedDevice === 'lattice',
+        })}
+        onClick={(_) => this.setState({ selectedDevice: 'lattice' })}
+      >
+        <img
+          className="hw-connect__btn__img"
+          src="images/lattice-logo.png"
+          alt=""
+        />
+      </button>
+    );
+  }
+
   renderConnectToLedgerButton() {
     return (
       <button
@@ -65,6 +82,12 @@ export default class SelectHardware extends Component {
         <div className="hw-connect__btn-wrapper">
           {this.renderConnectToLedgerButton()}
           {this.renderConnectToTrezorButton()}
+        </div>
+        <div
+          className="hw-connect__btn-wrapper"
+          style={{ margin: '10px 0 0 0' }}
+        >
+          {this.renderConnectToLatticeButton()}
         </div>
       </>
     );
@@ -129,6 +152,7 @@ export default class SelectHardware extends Component {
         return this.renderLedgerTutorialSteps();
       case 'trezor':
         return this.renderTrezorTutorialSteps();
+      case 'lattice': // TODO: Add Lattice tutorial
       default:
         return '';
     }
