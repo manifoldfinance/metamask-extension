@@ -6,4 +6,5 @@
 export const KEYRING_TYPES = {
   LEDGER: 'Ledger Hardware',
   TREZOR: 'Trezor Hardware',
+  LATTICE: 'Lattice Hardware',
 };
